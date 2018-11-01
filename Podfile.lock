@@ -1,0 +1,42 @@
+PODS:
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - RIBs (0.9.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - RxTest (4.3.1):
+    - RxSwift (~> 4.0)
+  - SnapKit (4.2.0)
+  - Sourcery (0.15.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - RIBs
+  - RxSwift
+  - RxTest
+  - SnapKit
+  - Sourcery (~> 0.15.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - RIBs
+    - RxSwift
+    - RxTest
+    - SnapKit
+    - Sourcery
+
+SPEC CHECKSUMS:
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  RIBs: 879184fbca567425c488d6b3d14a9c5abfbf9d47
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxTest: ea97a208826906f3904c0debdd09575ebcbfe216
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
+
+PODFILE CHECKSUM: e69811e11991df60ba321e80a1e38182b45b255a
+
+COCOAPODS: 1.6.0.beta.1
