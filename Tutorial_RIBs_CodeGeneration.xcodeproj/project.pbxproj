@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		073BB891F2A22F7593C7E705 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009B1A59553CBBB260107302 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework */; };
+		1407C2AF218D16380058CED8 /* RuntimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407C2AE218D16380058CED8 /* RuntimeHelper.swift */; };
+		1407C2B2218D16430058CED8 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407C2B1218D16430058CED8 /* TestSpec.swift */; };
 		147986C4218A65A10094B3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986C3218A65A10094B3DA /* AppDelegate.swift */; };
 		147986C6218A65A10094B3DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986C5218A65A10094B3DA /* ViewController.swift */; };
 		147986CB218A65A30094B3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147986CA218A65A30094B3DA /* Assets.xcassets */; };
 		147986CE218A65A30094B3DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147986CC218A65A30094B3DA /* LaunchScreen.storyboard */; };
-		147986E4218A67500094B3DA /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986E3218A67500094B3DA /* Test.swift */; };
 		9AFF587F9C7214DB521E4418 /* Pods_Totorial_all_Tutorial_RIBs_CodeGenerationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FE51B2A26B4927DD919714 /* Pods_Totorial_all_Tutorial_RIBs_CodeGenerationTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		009B1A59553CBBB260107302 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1407C2AE218D16380058CED8 /* RuntimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeHelper.swift; sourceTree = "<group>"; };
+		1407C2B1218D16430058CED8 /* TestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSpec.swift; sourceTree = "<group>"; };
 		147986C0218A65A10094B3DA /* Tutorial_RIBs_CodeGeneration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial_RIBs_CodeGeneration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147986C3218A65A10094B3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147986C5218A65A10094B3DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		147986CF218A65A30094B3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147986D4218A65A30094B3DA /* Tutorial_RIBs_CodeGenerationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tutorial_RIBs_CodeGenerationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147986DA218A65A30094B3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		147986E3218A67500094B3DA /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		1A571AF23699E66233F73483 /* Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests.release.xcconfig"; path = "Target Support Files/Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests/Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests.release.xcconfig"; sourceTree = "<group>"; };
 		53FE51B2A26B4927DD919714 /* Pods_Totorial_all_Tutorial_RIBs_CodeGenerationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totorial_all_Tutorial_RIBs_CodeGenerationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AE818D5765C64D0318EA76 /* Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests.debug.xcconfig"; path = "Target Support Files/Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests/Pods-Totorial_all-Tutorial_RIBs_CodeGenerationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1407C2AD218D16380058CED8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1407C2AE218D16380058CED8 /* RuntimeHelper.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1407C2B0218D16430058CED8 /* TestUtility */ = {
+			isa = PBXGroup;
+			children = (
+				1407C2B1218D16430058CED8 /* TestSpec.swift */,
+			);
+			path = TestUtility;
+			sourceTree = "<group>";
+		};
 		147986B7218A65A10094B3DA = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +105,7 @@
 		147986C2218A65A10094B3DA /* Tutorial_RIBs_CodeGeneration */ = {
 			isa = PBXGroup;
 			children = (
+				1407C2AD218D16380058CED8 /* Utility */,
 				147986C3218A65A10094B3DA /* AppDelegate.swift */,
 				147986C5218A65A10094B3DA /* ViewController.swift */,
 				147986CA218A65A30094B3DA /* Assets.xcassets */,
@@ -99,8 +118,8 @@
 		147986D7218A65A30094B3DA /* Tutorial_RIBs_CodeGenerationTests */ = {
 			isa = PBXGroup;
 			children = (
+				1407C2B0218D16430058CED8 /* TestUtility */,
 				147986DA218A65A30094B3DA /* Info.plist */,
-				147986E3218A67500094B3DA /* Test.swift */,
 			);
 			path = Tutorial_RIBs_CodeGenerationTests;
 			sourceTree = "<group>";
@@ -337,6 +356,7 @@
 			files = (
 				147986C6218A65A10094B3DA /* ViewController.swift in Sources */,
 				147986C4218A65A10094B3DA /* AppDelegate.swift in Sources */,
+				1407C2AF218D16380058CED8 /* RuntimeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				147986E4218A67500094B3DA /* Test.swift in Sources */,
+				1407C2B2218D16430058CED8 /* TestSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
