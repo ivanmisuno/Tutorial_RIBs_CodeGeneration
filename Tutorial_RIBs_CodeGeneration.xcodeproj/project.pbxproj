@@ -10,6 +10,10 @@
 		073BB891F2A22F7593C7E705 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009B1A59553CBBB260107302 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework */; };
 		1407C2AF218D16380058CED8 /* RuntimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407C2AE218D16380058CED8 /* RuntimeHelper.swift */; };
 		1407C2B2218D16430058CED8 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407C2B1218D16430058CED8 /* TestSpec.swift */; };
+		1465EBA6218E4045007C5201 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA2218E4045007C5201 /* RootRouter.swift */; };
+		1465EBA7218E4045007C5201 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA3218E4045007C5201 /* RootViewController.swift */; };
+		1465EBA8218E4045007C5201 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA4218E4045007C5201 /* RootBuilder.swift */; };
+		1465EBA9218E4045007C5201 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA5218E4045007C5201 /* RootInteractor.swift */; };
 		147986C4218A65A10094B3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986C3218A65A10094B3DA /* AppDelegate.swift */; };
 		147986C6218A65A10094B3DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986C5218A65A10094B3DA /* ViewController.swift */; };
 		147986CB218A65A30094B3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147986CA218A65A30094B3DA /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 		009B1A59553CBBB260107302 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1407C2AE218D16380058CED8 /* RuntimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeHelper.swift; sourceTree = "<group>"; };
 		1407C2B1218D16430058CED8 /* TestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSpec.swift; sourceTree = "<group>"; };
+		1465EBA2218E4045007C5201 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		1465EBA3218E4045007C5201 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		1465EBA4218E4045007C5201 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		1465EBA5218E4045007C5201 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		147986C0218A65A10094B3DA /* Tutorial_RIBs_CodeGeneration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial_RIBs_CodeGeneration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147986C3218A65A10094B3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147986C5218A65A10094B3DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +90,17 @@
 			path = TestUtility;
 			sourceTree = "<group>";
 		};
+		1465EBA1218E4001007C5201 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1465EBA2218E4045007C5201 /* RootRouter.swift */,
+				1465EBA3218E4045007C5201 /* RootViewController.swift */,
+				1465EBA4218E4045007C5201 /* RootBuilder.swift */,
+				1465EBA5218E4045007C5201 /* RootInteractor.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		147986B7218A65A10094B3DA = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +124,7 @@
 		147986C2218A65A10094B3DA /* Tutorial_RIBs_CodeGeneration */ = {
 			isa = PBXGroup;
 			children = (
+				1465EBA1218E4001007C5201 /* Root */,
 				1407C2AD218D16380058CED8 /* Utility */,
 				147986C3218A65A10094B3DA /* AppDelegate.swift */,
 				147986C5218A65A10094B3DA /* ViewController.swift */,
@@ -354,9 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1465EBA7218E4045007C5201 /* RootViewController.swift in Sources */,
+				1465EBA6218E4045007C5201 /* RootRouter.swift in Sources */,
+				1465EBA9218E4045007C5201 /* RootInteractor.swift in Sources */,
 				147986C6218A65A10094B3DA /* ViewController.swift in Sources */,
 				147986C4218A65A10094B3DA /* AppDelegate.swift in Sources */,
 				1407C2AF218D16380058CED8 /* RuntimeHelper.swift in Sources */,
+				1465EBA8218E4045007C5201 /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
