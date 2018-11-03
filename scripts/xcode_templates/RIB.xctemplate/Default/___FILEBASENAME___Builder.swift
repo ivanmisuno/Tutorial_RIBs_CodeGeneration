@@ -2,6 +2,7 @@
 
 import RIBs
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Dependency: Dependency {
     // TODO: Make sure to convert the variable into lower-camelcase.
     var ___VARIABLE_productName___ViewController: ___VARIABLE_productName___ViewControllable { get }
@@ -21,6 +22,7 @@ final class ___VARIABLE_productName___Component: Component<___VARIABLE_productNa
 
 // MARK: - Builder
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Buildable: Buildable {
     func build(withListener listener: ___VARIABLE_productName___Listener) -> ___VARIABLE_productName___Routing
 }
@@ -32,7 +34,8 @@ final class ___VARIABLE_productName___Builder: Builder<___VARIABLE_productName__
     }
 
     func build(withListener listener: ___VARIABLE_productName___Listener) -> ___VARIABLE_productName___Routing {
-        let component = ___VARIABLE_productName___Component(dependency: dependency)
+        // TODO: Uncomment when ready.
+        //let component = ___VARIABLE_productName___Component(dependency: dependency)
         let interactor = ___VARIABLE_productName___Interactor()
         interactor.listener = listener
         return ___VARIABLE_productName___Router(interactor: interactor, viewController: component.___VARIABLE_productName___ViewController)

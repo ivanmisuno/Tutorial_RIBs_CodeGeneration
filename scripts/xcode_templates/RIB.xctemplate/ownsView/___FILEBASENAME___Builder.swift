@@ -2,6 +2,7 @@
 
 import RIBs
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Dependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
@@ -14,6 +15,7 @@ final class ___VARIABLE_productName___Component: Component<___VARIABLE_productNa
 
 // MARK: - Builder
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Buildable: Buildable {
     func build(withListener listener: ___VARIABLE_productName___Listener) -> ___VARIABLE_productName___Routing
 }
@@ -25,7 +27,8 @@ final class ___VARIABLE_productName___Builder: Builder<___VARIABLE_productName__
     }
 
     func build(withListener listener: ___VARIABLE_productName___Listener) -> ___VARIABLE_productName___Routing {
-        let component = ___VARIABLE_productName___Component(dependency: dependency)
+        // TODO: Uncomment when ready.
+        //let component = ___VARIABLE_productName___Component(dependency: dependency)
         let viewController = ___VARIABLE_productName___ViewController()
         let interactor = ___VARIABLE_productName___Interactor(presenter: viewController)
         interactor.listener = listener

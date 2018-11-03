@@ -2,11 +2,13 @@
 
 import RIBs
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Interactable: Interactable {
     var router: ___VARIABLE_productName___Routing? { get set }
     var listener: ___VARIABLE_productName___Listener? { get set }
 }
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___ViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy. Since
     // this RIB does not own its own view, this protocol is conformed to by one of this

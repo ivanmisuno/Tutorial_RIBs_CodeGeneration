@@ -3,11 +3,13 @@
 import RIBs
 import RxSwift
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Routing: Routing {
     func cleanupViews()
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___Listener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }

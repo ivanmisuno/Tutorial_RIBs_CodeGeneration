@@ -4,6 +4,7 @@ import RIBs
 import RxSwift
 import UIKit
 
+/// sourcery: CreateMock
 protocol ___VARIABLE_productName___PresentableListener: class {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
