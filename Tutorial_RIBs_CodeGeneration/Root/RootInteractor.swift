@@ -10,7 +10,7 @@ import RIBs
 import RxSwift
 
 /// sourcery: CreateMock
-protocol RootRouting: ViewableRouting {
+protocol RootRouting: LaunchRouting {
 }
 
 /// sourcery: CreateMock

@@ -18,7 +18,7 @@ protocol RootInteractable: Interactable {
 protocol RootViewControllable: ViewControllable {
 }
 
-final class RootRouter: ViewableRouter<RootInteractable, RootViewControllable>, RootRouting {
+final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
 
     override init(interactor: RootInteractable, viewController: RootViewControllable) {
         super.init(interactor: interactor, viewController: viewController)

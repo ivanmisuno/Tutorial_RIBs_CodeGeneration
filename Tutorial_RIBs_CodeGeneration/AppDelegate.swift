@@ -12,6 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
+    private var rootRouter: RootRouting?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
 
@@ -29,19 +31,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         #endif
 
-        finishLaunchingWithUI()
+        finishLaunching(with: rootBuilder)
 
         return true
     }
 }
 
 private extension AppDelegate {
-    func finishLaunchingWithUI() {
+    var rootBuilder: RootBuildable {
+        return RootBuilder(dependency: self)
+    }
+
+    func finishLaunching(with rootBuilder: RootBuildable) {
         guard let window = window else { return }
 
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.gray
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
+        let rootRouter = rootBuilder.build(withListener: self)
+        self.rootRouter = rootRouter
+
+        rootRouter.launchFromWindow(window)
     }
 }
+
+extension AppDelegate: RootDependency {}
+extension AppDelegate: RootListener {}
