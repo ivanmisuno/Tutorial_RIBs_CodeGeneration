@@ -10,6 +10,10 @@
 		073BB891F2A22F7593C7E705 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009B1A59553CBBB260107302 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework */; };
 		1407C2AF218D16380058CED8 /* RuntimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407C2AE218D16380058CED8 /* RuntimeHelper.swift */; };
 		1407C2B2218D16430058CED8 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407C2B1218D16430058CED8 /* TestSpec.swift */; };
+		140EEEA5218E6084007693C7 /* RootRouterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEA4218E6084007693C7 /* RootRouterSpec.swift */; };
+		140EEEA7218E61A5007693C7 /* RootInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEA6218E61A5007693C7 /* RootInteractorSpec.swift */; };
+		140EEEAA218E6209007693C7 /* SplashRouterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEA9218E6209007693C7 /* SplashRouterSpec.swift */; };
+		140EEEAC218E624B007693C7 /* SplashInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEAB218E624B007693C7 /* SplashInteractorSpec.swift */; };
 		1465EBA6218E4045007C5201 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA2218E4045007C5201 /* RootRouter.swift */; };
 		1465EBA7218E4045007C5201 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA3218E4045007C5201 /* RootViewController.swift */; };
 		1465EBA8218E4045007C5201 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA4218E4045007C5201 /* RootBuilder.swift */; };
@@ -39,6 +43,10 @@
 		009B1A59553CBBB260107302 /* Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Totorial_all_Tutorial_RIBs_CodeGeneration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1407C2AE218D16380058CED8 /* RuntimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeHelper.swift; sourceTree = "<group>"; };
 		1407C2B1218D16430058CED8 /* TestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSpec.swift; sourceTree = "<group>"; };
+		140EEEA4218E6084007693C7 /* RootRouterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterSpec.swift; sourceTree = "<group>"; };
+		140EEEA6218E61A5007693C7 /* RootInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractorSpec.swift; sourceTree = "<group>"; };
+		140EEEA9218E6209007693C7 /* SplashRouterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouterSpec.swift; sourceTree = "<group>"; };
+		140EEEAB218E624B007693C7 /* SplashInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractorSpec.swift; sourceTree = "<group>"; };
 		1465EBA2218E4045007C5201 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		1465EBA3218E4045007C5201 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1465EBA4218E4045007C5201 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
@@ -96,6 +104,24 @@
 				1407C2B1218D16430058CED8 /* TestSpec.swift */,
 			);
 			path = TestUtility;
+			sourceTree = "<group>";
+		};
+		140EEEA3218E6074007693C7 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				140EEEA4218E6084007693C7 /* RootRouterSpec.swift */,
+				140EEEA6218E61A5007693C7 /* RootInteractorSpec.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		140EEEA8218E61F8007693C7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				140EEEA9218E6209007693C7 /* SplashRouterSpec.swift */,
+				140EEEAB218E624B007693C7 /* SplashInteractorSpec.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		1465EBA1218E4001007C5201 /* Root */ = {
@@ -158,6 +184,8 @@
 		147986D7218A65A30094B3DA /* Tutorial_RIBs_CodeGenerationTests */ = {
 			isa = PBXGroup;
 			children = (
+				140EEEA3218E6074007693C7 /* Root */,
+				140EEEA8218E61F8007693C7 /* Splash */,
 				1407C2B0218D16430058CED8 /* TestUtility */,
 				147986DA218A65A30094B3DA /* Info.plist */,
 			);
@@ -412,7 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140EEEAC218E624B007693C7 /* SplashInteractorSpec.swift in Sources */,
+				140EEEAA218E6209007693C7 /* SplashRouterSpec.swift in Sources */,
+				140EEEA7218E61A5007693C7 /* RootInteractorSpec.swift in Sources */,
 				1407C2B2218D16430058CED8 /* TestSpec.swift in Sources */,
+				140EEEA5218E6084007693C7 /* RootRouterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
