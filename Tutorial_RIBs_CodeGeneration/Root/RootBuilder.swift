@@ -29,11 +29,20 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 
     func build(withListener listener: RootListener) -> RootRouting {
-        // TODO: Uncomment when ready.
-        //let component = RootComponent(dependency: dependency)
+
+        let component = RootComponent(dependency: dependency)
         let viewController = RootViewController()
         let interactor = RootInteractor(presenter: viewController)
         interactor.listener = listener
-        return RootRouter(interactor: interactor, viewController: viewController)
+
+        let splashBuilder = SplashBuilder(dependency: component)
+
+        return RootRouter(
+            interactor: interactor,
+            viewController: viewController,
+            splashBuilder: splashBuilder)
     }
+}
+
+extension RootComponent: SplashDependency {
 }

@@ -11,6 +11,8 @@ import RxSwift
 
 /// sourcery: CreateMock
 protocol RootRouting: LaunchRouting {
+    /// Build and attach Splash RIB synchronously.
+    func routeToSplash()
 }
 
 /// sourcery: CreateMock
@@ -34,5 +36,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
     override func didBecomeActive() {
         super.didBecomeActive()
+
+        router?.routeToSplash()
     }
 }
