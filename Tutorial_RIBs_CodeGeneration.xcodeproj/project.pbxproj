@@ -14,6 +14,10 @@
 		1465EBA7218E4045007C5201 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA3218E4045007C5201 /* RootViewController.swift */; };
 		1465EBA8218E4045007C5201 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA4218E4045007C5201 /* RootBuilder.swift */; };
 		1465EBA9218E4045007C5201 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA5218E4045007C5201 /* RootInteractor.swift */; };
+		1465EBAF218E4FE1007C5201 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBAB218E4FE1007C5201 /* SplashRouter.swift */; };
+		1465EBB0218E4FE1007C5201 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBAC218E4FE1007C5201 /* SplashViewController.swift */; };
+		1465EBB1218E4FE1007C5201 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBAD218E4FE1007C5201 /* SplashBuilder.swift */; };
+		1465EBB2218E4FE1007C5201 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBAE218E4FE1007C5201 /* SplashInteractor.swift */; };
 		147986C4218A65A10094B3DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986C3218A65A10094B3DA /* AppDelegate.swift */; };
 		147986C6218A65A10094B3DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147986C5218A65A10094B3DA /* ViewController.swift */; };
 		147986CB218A65A30094B3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147986CA218A65A30094B3DA /* Assets.xcassets */; };
@@ -39,6 +43,10 @@
 		1465EBA3218E4045007C5201 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1465EBA4218E4045007C5201 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		1465EBA5218E4045007C5201 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		1465EBAB218E4FE1007C5201 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		1465EBAC218E4FE1007C5201 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		1465EBAD218E4FE1007C5201 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		1465EBAE218E4FE1007C5201 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		147986C0218A65A10094B3DA /* Tutorial_RIBs_CodeGeneration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial_RIBs_CodeGeneration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147986C3218A65A10094B3DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147986C5218A65A10094B3DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,17 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		1465EBAA218E4FCD007C5201 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1465EBAB218E4FE1007C5201 /* SplashRouter.swift */,
+				1465EBAC218E4FE1007C5201 /* SplashViewController.swift */,
+				1465EBAD218E4FE1007C5201 /* SplashBuilder.swift */,
+				1465EBAE218E4FE1007C5201 /* SplashInteractor.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		147986B7218A65A10094B3DA = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1465EBA1218E4001007C5201 /* Root */,
+				1465EBAA218E4FCD007C5201 /* Splash */,
 				1407C2AD218D16380058CED8 /* Utility */,
 				147986C3218A65A10094B3DA /* AppDelegate.swift */,
 				147986C5218A65A10094B3DA /* ViewController.swift */,
@@ -375,11 +395,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1465EBA7218E4045007C5201 /* RootViewController.swift in Sources */,
+				1465EBAF218E4FE1007C5201 /* SplashRouter.swift in Sources */,
 				1465EBA6218E4045007C5201 /* RootRouter.swift in Sources */,
+				1465EBB0218E4FE1007C5201 /* SplashViewController.swift in Sources */,
 				1465EBA9218E4045007C5201 /* RootInteractor.swift in Sources */,
+				1465EBB2218E4FE1007C5201 /* SplashInteractor.swift in Sources */,
 				147986C6218A65A10094B3DA /* ViewController.swift in Sources */,
 				147986C4218A65A10094B3DA /* AppDelegate.swift in Sources */,
 				1407C2AF218D16380058CED8 /* RuntimeHelper.swift in Sources */,
+				1465EBB1218E4FE1007C5201 /* SplashBuilder.swift in Sources */,
 				1465EBA8218E4045007C5201 /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
