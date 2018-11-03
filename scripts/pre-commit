@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# the directory of the script. all locations are relative to the $DIR
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+focused_tests=$(git diff --cached -- *.swift ":(exclude)*/Pods" | grep -E '^\+\s*f(describe|context|it|itBehavesLike)\s*\(' | wc -l)
+if [ "$focused_tests" -gt 0 ] ; then
+    echo "  Error: Attempt to commit a focused test."
+    echo "         Unfocus test cases before committing (replace fdescribe => describe, fcontext => context, fit => it, etc):"
+    exit 1
+fi
+
+quickspec=$(git diff --cached -- *.swift ":(exclude)*/TestSpec.swift" ":(exclude)*/SnapshotTestSpec.swift" | grep -E '^\+.*?\bQuickSpec\b' | wc -l)
+if [ "$quickspec" -gt 0 ] ; then
+    echo "  Error: Usage of QuickSpec class is prohibited."
+    echo "         Please derive your test case class from TestSpec or SnapshotTestSpec classes instead."
+    exit 1
+fi
