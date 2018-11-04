@@ -20,5 +20,6 @@ abstract_target 'Totorial_all' do
         pod 'RxTest'
         pod 'Quick'
         pod 'Nimble'
+        pod 'SwiftMockTemplates', :git => 'https://github.com/ivanmisuno/swift-sourcery-templates.git', :tag => '0.1.0'
     end
 end

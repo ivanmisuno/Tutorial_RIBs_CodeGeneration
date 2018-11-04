@@ -1,0 +1,19 @@
+sources:
+  - Tutorial_RIBs_CodeGeneration
+  - Pods/RIBs
+templates:
+  - Pods/SwiftMockTemplates/templates/Mocks.swifttemplate
+output:
+  Tutorial_RIBs_CodeGenerationTests/Mocks
+args:
+  testable:
+    - Tutorial_RIBs_CodeGeneration
+  import:
+    - RIBs
+    - RxSwift
+    - RxTest
+  excludedSwiftLintRules:
+    - force_cast
+    - function_body_length
+    - line_length
+    - vertical_whitespace

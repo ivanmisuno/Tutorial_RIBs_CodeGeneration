@@ -10,6 +10,9 @@ PODS:
     - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
   - SnapKit (4.2.0)
+  - Sourcery (0.15.0)
+  - SwiftMockTemplates (0.1.0):
+    - Sourcery (~> 0.15.0)
 
 DEPENDENCIES:
   - Nimble
@@ -18,6 +21,7 @@ DEPENDENCIES:
   - RxSwift
   - RxTest
   - SnapKit
+  - SwiftMockTemplates (from `https://github.com/ivanmisuno/swift-sourcery-templates.git`, tag `0.1.0`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -28,6 +32,17 @@ SPEC REPOS:
     - RxSwift
     - RxTest
     - SnapKit
+    - Sourcery
+
+EXTERNAL SOURCES:
+  SwiftMockTemplates:
+    :git: https://github.com/ivanmisuno/swift-sourcery-templates.git
+    :tag: 0.1.0
+
+CHECKOUT OPTIONS:
+  SwiftMockTemplates:
+    :git: https://github.com/ivanmisuno/swift-sourcery-templates.git
+    :tag: 0.1.0
 
 SPEC CHECKSUMS:
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
@@ -37,7 +52,9 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
+  SwiftMockTemplates: 9ac09c9f5be092158557fa088daa86d147b7d2ea
 
-PODFILE CHECKSUM: a15251d1a38e17d1529b55ab6da4763f20b292d0
+PODFILE CHECKSUM: 06867c9f5fef64e593faad1a50500e85299615b9
 
 COCOAPODS: 1.6.0.beta.1
