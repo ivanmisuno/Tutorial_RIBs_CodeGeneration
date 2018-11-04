@@ -15,6 +15,7 @@
 		140EEEAA218E6209007693C7 /* SplashRouterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEA9218E6209007693C7 /* SplashRouterSpec.swift */; };
 		140EEEAC218E624B007693C7 /* SplashInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEAB218E624B007693C7 /* SplashInteractorSpec.swift */; };
 		140EEEAF218E7160007693C7 /* Mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EEEAE218E7160007693C7 /* Mocks.generated.swift */; };
+		144AC723218FA35C000B963E /* AnnotatedRIBsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144AC722218FA35B000B963E /* AnnotatedRIBsProtocols.swift */; };
 		1465EBA6218E4045007C5201 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA2218E4045007C5201 /* RootRouter.swift */; };
 		1465EBA7218E4045007C5201 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA3218E4045007C5201 /* RootViewController.swift */; };
 		1465EBA8218E4045007C5201 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465EBA4218E4045007C5201 /* RootBuilder.swift */; };
@@ -49,6 +50,7 @@
 		140EEEA9218E6209007693C7 /* SplashRouterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouterSpec.swift; sourceTree = "<group>"; };
 		140EEEAB218E624B007693C7 /* SplashInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractorSpec.swift; sourceTree = "<group>"; };
 		140EEEAE218E7160007693C7 /* Mocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.generated.swift; sourceTree = "<group>"; };
+		144AC722218FA35B000B963E /* AnnotatedRIBsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedRIBsProtocols.swift; sourceTree = "<group>"; };
 		1465EBA2218E4045007C5201 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		1465EBA3218E4045007C5201 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1465EBA4218E4045007C5201 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		140EEEAD218E7160007693C7 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				144AC722218FA35B000B963E /* AnnotatedRIBsProtocols.swift */,
 				140EEEAE218E7160007693C7 /* Mocks.generated.swift */,
 			);
 			path = Mocks;
@@ -458,6 +461,7 @@
 				140EEEAC218E624B007693C7 /* SplashInteractorSpec.swift in Sources */,
 				140EEEAA218E6209007693C7 /* SplashRouterSpec.swift in Sources */,
 				140EEEA7218E61A5007693C7 /* RootInteractorSpec.swift in Sources */,
+				144AC723218FA35C000B963E /* AnnotatedRIBsProtocols.swift in Sources */,
 				1407C2B2218D16430058CED8 /* TestSpec.swift in Sources */,
 				140EEEAF218E7160007693C7 /* Mocks.generated.swift in Sources */,
 				140EEEA5218E6084007693C7 /* RootRouterSpec.swift in Sources */,

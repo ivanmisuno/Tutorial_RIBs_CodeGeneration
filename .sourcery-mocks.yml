@@ -1,5 +1,6 @@
 sources:
   - Tutorial_RIBs_CodeGeneration
+  - Tutorial_RIBs_CodeGenerationTests/Mocks/AnnotatedRIBsProtocols.swift
   - Pods/RIBs
 templates:
   - Pods/SwiftMockTemplates/templates/Mocks.swifttemplate

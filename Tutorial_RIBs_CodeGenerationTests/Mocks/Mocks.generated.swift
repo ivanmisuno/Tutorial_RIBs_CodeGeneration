@@ -11,6 +11,108 @@ import RxSwift
 import RxTest
 @testable import Tutorial_RIBs_CodeGeneration
 
+// MARK: - Buildable
+class BuildableMock: Buildable {
+}
+
+// MARK: - Interactable
+class InteractableMock: Interactable {
+
+    // MARK: - Variables
+    var isActive: Bool = false
+    var isActiveStream: Observable<Bool> {
+        isActiveStreamGetCount += 1
+        if let handler = isActiveStreamGetHandler {
+            return handler()
+        }
+        return isActiveStreamSubject.asObservable()
+    }
+    var isActiveStreamGetCount: Int = 0
+    var isActiveStreamGetHandler: (() -> Observable<Bool>)? = nil
+    lazy var isActiveStreamSubject = PublishSubject<Bool>()
+
+    // MARK: - Methods
+    func activate() {
+        activateCallCount += 1
+        if let __activateHandler = self.activateHandler {
+            __activateHandler()
+        }
+    }
+    var activateCallCount: Int = 0
+    var activateHandler: (() -> ())? = nil
+    func deactivate() {
+        deactivateCallCount += 1
+        if let __deactivateHandler = self.deactivateHandler {
+            __deactivateHandler()
+        }
+    }
+    var deactivateCallCount: Int = 0
+    var deactivateHandler: (() -> ())? = nil
+}
+
+// MARK: - LaunchRouting
+class LaunchRoutingMock: LaunchRouting {
+
+    // MARK: - Variables
+    var children: [Routing] = []
+    var interactable: Interactable
+    var lifecycle: Observable<RouterLifecycle> {
+        lifecycleGetCount += 1
+        if let handler = lifecycleGetHandler {
+            return handler()
+        }
+        return lifecycleSubject.asObservable()
+    }
+    var lifecycleGetCount: Int = 0
+    var lifecycleGetHandler: (() -> Observable<RouterLifecycle>)? = nil
+    lazy var lifecycleSubject = PublishSubject<RouterLifecycle>()
+    var viewControllable: ViewControllable
+
+    // MARK: - Initializer
+    init(interactable: Interactable, viewControllable: ViewControllable) {
+        self.interactable = interactable
+        self.viewControllable = viewControllable
+    }
+
+    // MARK: - Methods
+    func attachChild(_ child: Routing) {
+        attachChildCallCount += 1
+        if let __attachChildHandler = self.attachChildHandler {
+            __attachChildHandler(child)
+        }
+    }
+    var attachChildCallCount: Int = 0
+    var attachChildHandler: ((_ child: Routing) -> ())? = nil
+    func detachChild(_ child: Routing) {
+        detachChildCallCount += 1
+        if let __detachChildHandler = self.detachChildHandler {
+            __detachChildHandler(child)
+        }
+    }
+    var detachChildCallCount: Int = 0
+    var detachChildHandler: ((_ child: Routing) -> ())? = nil
+    func launchFromWindow(_ window: UIWindow) {
+        launchFromWindowCallCount += 1
+        if let __launchFromWindowHandler = self.launchFromWindowHandler {
+            __launchFromWindowHandler(window)
+        }
+    }
+    var launchFromWindowCallCount: Int = 0
+    var launchFromWindowHandler: ((_ window: UIWindow) -> ())? = nil
+    func load() {
+        loadCallCount += 1
+        if let __loadHandler = self.loadHandler {
+            __loadHandler()
+        }
+    }
+    var loadCallCount: Int = 0
+    var loadHandler: (() -> ())? = nil
+}
+
+// MARK: - Presentable
+class PresentableMock: Presentable {
+}
+
 // MARK: - RootBuildable
 class RootBuildableMock: RootBuildable {
 
@@ -176,6 +278,55 @@ class RootViewControllableMock: RootViewControllable {
     }
 }
 
+// MARK: - Routing
+class RoutingMock: Routing {
+
+    // MARK: - Variables
+    var children: [Routing] = []
+    var interactable: Interactable
+    var lifecycle: Observable<RouterLifecycle> {
+        lifecycleGetCount += 1
+        if let handler = lifecycleGetHandler {
+            return handler()
+        }
+        return lifecycleSubject.asObservable()
+    }
+    var lifecycleGetCount: Int = 0
+    var lifecycleGetHandler: (() -> Observable<RouterLifecycle>)? = nil
+    lazy var lifecycleSubject = PublishSubject<RouterLifecycle>()
+
+    // MARK: - Initializer
+    init(interactable: Interactable) {
+        self.interactable = interactable
+    }
+
+    // MARK: - Methods
+    func attachChild(_ child: Routing) {
+        attachChildCallCount += 1
+        if let __attachChildHandler = self.attachChildHandler {
+            __attachChildHandler(child)
+        }
+    }
+    var attachChildCallCount: Int = 0
+    var attachChildHandler: ((_ child: Routing) -> ())? = nil
+    func detachChild(_ child: Routing) {
+        detachChildCallCount += 1
+        if let __detachChildHandler = self.detachChildHandler {
+            __detachChildHandler(child)
+        }
+    }
+    var detachChildCallCount: Int = 0
+    var detachChildHandler: ((_ child: Routing) -> ())? = nil
+    func load() {
+        loadCallCount += 1
+        if let __loadHandler = self.loadHandler {
+            __loadHandler()
+        }
+    }
+    var loadCallCount: Int = 0
+    var loadHandler: (() -> ())? = nil
+}
+
 // MARK: - SplashBuildable
 class SplashBuildableMock: SplashBuildable {
 
@@ -323,4 +474,102 @@ class SplashViewControllableMock: SplashViewControllable {
     init(uiviewController: UIViewController) {
         self.uiviewController = uiviewController
     }
+}
+
+// MARK: - ViewControllable
+class ViewControllableMock: ViewControllable {
+
+    // MARK: - Variables
+    var uiviewController: UIViewController
+
+    // MARK: - Initializer
+    init(uiviewController: UIViewController) {
+        self.uiviewController = uiviewController
+    }
+}
+
+// MARK: - ViewableRouting
+class ViewableRoutingMock: ViewableRouting {
+
+    // MARK: - Variables
+    var children: [Routing] = []
+    var interactable: Interactable
+    var lifecycle: Observable<RouterLifecycle> {
+        lifecycleGetCount += 1
+        if let handler = lifecycleGetHandler {
+            return handler()
+        }
+        return lifecycleSubject.asObservable()
+    }
+    var lifecycleGetCount: Int = 0
+    var lifecycleGetHandler: (() -> Observable<RouterLifecycle>)? = nil
+    lazy var lifecycleSubject = PublishSubject<RouterLifecycle>()
+    var viewControllable: ViewControllable
+
+    // MARK: - Initializer
+    init(interactable: Interactable, viewControllable: ViewControllable) {
+        self.interactable = interactable
+        self.viewControllable = viewControllable
+    }
+
+    // MARK: - Methods
+    func attachChild(_ child: Routing) {
+        attachChildCallCount += 1
+        if let __attachChildHandler = self.attachChildHandler {
+            __attachChildHandler(child)
+        }
+    }
+    var attachChildCallCount: Int = 0
+    var attachChildHandler: ((_ child: Routing) -> ())? = nil
+    func detachChild(_ child: Routing) {
+        detachChildCallCount += 1
+        if let __detachChildHandler = self.detachChildHandler {
+            __detachChildHandler(child)
+        }
+    }
+    var detachChildCallCount: Int = 0
+    var detachChildHandler: ((_ child: Routing) -> ())? = nil
+    func load() {
+        loadCallCount += 1
+        if let __loadHandler = self.loadHandler {
+            __loadHandler()
+        }
+    }
+    var loadCallCount: Int = 0
+    var loadHandler: (() -> ())? = nil
+}
+
+// MARK: - Working
+class WorkingMock: Working {
+
+    // MARK: - Variables
+    var isStarted: Bool = false
+    var isStartedStream: Observable<Bool> {
+        isStartedStreamGetCount += 1
+        if let handler = isStartedStreamGetHandler {
+            return handler()
+        }
+        return isStartedStreamSubject.asObservable()
+    }
+    var isStartedStreamGetCount: Int = 0
+    var isStartedStreamGetHandler: (() -> Observable<Bool>)? = nil
+    lazy var isStartedStreamSubject = PublishSubject<Bool>()
+
+    // MARK: - Methods
+    func start(_ interactorScope: InteractorScope) {
+        startCallCount += 1
+        if let __startHandler = self.startHandler {
+            __startHandler(interactorScope)
+        }
+    }
+    var startCallCount: Int = 0
+    var startHandler: ((_ interactorScope: InteractorScope) -> ())? = nil
+    func stop() {
+        stopCallCount += 1
+        if let __stopHandler = self.stopHandler {
+            __stopHandler()
+        }
+    }
+    var stopCallCount: Int = 0
+    var stopHandler: (() -> ())? = nil
 }
