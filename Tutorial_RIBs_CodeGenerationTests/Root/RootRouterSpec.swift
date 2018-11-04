@@ -35,13 +35,29 @@ class RootRouterSpec: TestSpec {
 
         // MARK: - routeToSplash()
         describe("routeToSplash()") {
-//            var splashRouter: SplashRoutingMock!
-//            beforeEach {
-//                splashBuilder.buildHandler = { (_ listener: SplashListener) -> (SplashRouting) in
-//                    splashRouter = SplashRoutingMock(interactable: <#T##Interactable#>, viewControllable: <#T##ViewControllable#>) // TODO: Oops, need mocks for base RIBs' protocols (`Interactable`, `ViewControllable`), but we can't annotate them (yet). Will solve that in the next commit.
-//                    return splashRouter
-//                }
-//            }
+            var splashRouter: SplashRoutingMock!
+            beforeEach {
+                splashBuilder.buildHandler = { (_ listener: SplashListener) -> (SplashRouting) in
+                    splashRouter = SplashRoutingMock(interactable: InteractableMock(), viewControllable: ViewControllableMock(uiviewController: UIViewController()))
+                    return splashRouter
+                }
+                sut.routeToSplash()
+            }
+            it("builds splashRouter") {
+                expect(splashBuilder.buildCallCount) == 1
+            }
+            it("attaches splashRouter to the router hierarchy") {
+                expect(sut.children).to(containElementSatisfying({ $0 === splashRouter }))
+            }
+            it("adds view controller to the view controller hierarchy") {
+                expect(viewController.uiviewController.children).to(containElementSatisfying({ $0 === splashRouter.viewControllable.uiviewController}))
+            }
+            it("adds view controller's view to the view hierarchy") {
+                expect(viewController.uiviewController.view.subviews).to(containElementSatisfying({ $0 === splashRouter.viewControllable.uiviewController.view}))
+            }
+            it("splashRouter is loaded") {
+                expect(splashRouter.loadCallCount) == 1
+            }
         } // describe("routeToSplash()")
     }
 }
