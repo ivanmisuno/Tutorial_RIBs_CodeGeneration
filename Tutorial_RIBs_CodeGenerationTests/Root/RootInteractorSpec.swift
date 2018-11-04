@@ -13,13 +13,32 @@ import RIBs
 
 class RootInteractorSpec: TestSpec {
     override func spec() {
-        /*
-        var presenter: RootPresentable!
+        var presenter: RootPresentableMock!
         var sut: RootInteractor!
+        //var router: RootRoutingMock!
         beforeEach {
-            //presenter = RootPresentable
+            presenter = RootPresentableMock()
             sut = RootInteractor(presenter: presenter)
+
+//            router = RootRoutingMock(interactable: <#T##Interactable#>, viewControllable: <#T##ViewControllable#>) // TODO: same here.
+//            sut.router = router
         }
-         */
+
+        // MARK: - init()
+        describe("init()") {
+            it("sets presenter.listener to self") {
+                expect(presenter.listener) === sut
+            }
+        } // describe("init()")
+
+//        // MARK: - didBecomeActive()
+//        describe("didBecomeActive()") {
+//            beforeEach {
+//                sut.activate()
+//            }
+//            it("calls router.routeToSplash()") {
+//                expect(router.routeToSplashCallCount) == 1
+//            }
+//        } // describe("didBecomeActive()")
     }
 }

@@ -13,14 +13,21 @@ import RIBs
 
 class SplashRouterSpec: TestSpec {
     override func spec() {
-        /*
-        var interactor: SplashInteractable!
-        var viewController: SplashViewControllable!
+        var interactor: SplashInteractableMock!
+        var viewController: SplashViewControllableMock!
         var sut: SplashRouter!
         beforeEach {
-            sut = SplashRouter(interactor: <#T##SplashInteractable#>,
-                               viewController: <#T##SplashViewControllable#>)
+            interactor = SplashInteractableMock()
+            viewController = SplashViewControllableMock(uiviewController: UIViewController())
+            sut = SplashRouter(interactor: interactor,
+                               viewController: viewController)
         }
-         */
+
+        // MARK: - init()
+        describe("init()") {
+            it("sets interactor.router to self") {
+                expect(interactor.router) === sut
+            }
+        } // describe("init()")
     }
 }
