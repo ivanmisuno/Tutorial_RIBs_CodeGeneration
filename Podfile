@@ -18,7 +18,6 @@ abstract_target 'Totorial_all' do
         inherit! :complete
 
         pod 'RxTest'
-        pod 'Sourcery', '~> 0.15.0'
         pod 'Quick'
         pod 'Nimble'
     end
