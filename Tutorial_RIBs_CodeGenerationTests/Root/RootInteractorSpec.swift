@@ -39,6 +39,17 @@ class RootInteractorSpec: TestSpec {
             it("calls router.routeToSplash()") {
                 expect(router.routeToSplashCallCount) == 1
             }
+
+            // MARK: - SplashListener
+            describe("splashDidComplete()") {
+                beforeEach {
+                    sut.splashDidComplete()
+                }
+                it("detaches the splash") {
+                    expect(router.detachSplashCallCount) == 1
+                }
+            } // describe("splashDidComplete()")
+
         } // describe("didBecomeActive()")
     }
 }

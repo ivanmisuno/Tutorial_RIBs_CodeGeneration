@@ -25,6 +25,21 @@ class SplashInteractorSpec: TestSpec {
             it("sets presenter.listener to self") {
                 expect(presenter.listener) === sut
             }
+
+            // MARK: - didBecomeActive()
+            describe("didBecomeActive()") {
+                beforeEach {
+                    sut.activate()
+                }
+                it("presentes loading animation") {
+                    expect(presenter.startLoadingAnimationCallCount) == 1
+                }
+
+                context("resources are loaded") {
+                    // TODO:
+                } // context("resources are loaded")
+
+            } // describe("didBecomeActive()")
         } // describe("init()")
 
     }

@@ -35,10 +35,14 @@ class RootRouterSpec: TestSpec {
 
         // MARK: - routeToSplash()
         describe("routeToSplash()") {
+            var splashInteractor: InteractableMock!
+            var splashViewController: ViewControllableMock!
             var splashRouter: SplashRoutingMock!
             beforeEach {
                 splashBuilder.buildHandler = { (_ listener: SplashListener) -> (SplashRouting) in
-                    splashRouter = SplashRoutingMock(interactable: InteractableMock(), viewControllable: ViewControllableMock(uiviewController: UIViewController()))
+                    splashInteractor = InteractableMock()
+                    splashViewController = ViewControllableMock(uiviewController: UIViewController())
+                    splashRouter = SplashRoutingMock(interactable: splashInteractor, viewControllable: splashViewController)
                     return splashRouter
                 }
                 sut.routeToSplash()
@@ -49,6 +53,9 @@ class RootRouterSpec: TestSpec {
             it("attaches splashRouter to the router hierarchy") {
                 expect(sut.children).to(containElementSatisfying({ $0 === splashRouter }))
             }
+            it("activates splash interactor") {
+                expect(splashInteractor.activateCallCount) == 1
+            }
             it("adds view controller to the view controller hierarchy") {
                 expect(viewController.uiviewController.children).to(containElementSatisfying({ $0 === splashRouter.viewControllable.uiviewController}))
             }
@@ -58,6 +65,25 @@ class RootRouterSpec: TestSpec {
             it("splashRouter is loaded") {
                 expect(splashRouter.loadCallCount) == 1
             }
+
+            // MARK: - detachSplash()
+            describe("detachSplash()") {
+                beforeEach {
+                    sut.detachSplash()
+                }
+                it("deactivates splash interactor") {
+                    expect(splashInteractor.deactivateCallCount) == 1
+                }
+                it("removes splash router from the hierarchy") {
+                    expect(sut.children).toNot(containElementSatisfying({ $0 === splashRouter }))
+                }
+                it("removes splash view controller from the view controller hierarchy") {
+                    expect(viewController.uiviewController.children).toNot(containElementSatisfying({ $0 === splashRouter.viewControllable.uiviewController}))
+                }
+                it("removes splash controller's view to the view hierarchy") {
+                    expect(viewController.uiviewController.view.subviews).toNot(containElementSatisfying({ $0 === splashRouter.viewControllable.uiviewController.view}))
+                }
+            } // describe("detachSplash()")
         } // describe("routeToSplash()")
     }
 }

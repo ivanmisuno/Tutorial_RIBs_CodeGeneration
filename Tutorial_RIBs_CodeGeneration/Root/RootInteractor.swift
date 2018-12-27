@@ -13,6 +13,7 @@ import RxSwift
 protocol RootRouting: LaunchRouting {
     /// Build and attach Splash RIB synchronously.
     func routeToSplash()
+    func detachSplash()
 }
 
 /// sourcery: CreateMock
@@ -38,5 +39,11 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         super.didBecomeActive()
 
         router?.routeToSplash()
+    }
+
+    // MARK: - SplashListener
+
+    func splashDidComplete() {
+        router?.detachSplash()
     }
 }

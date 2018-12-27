@@ -55,4 +55,19 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         }
         viewController.uiviewController.setNeedsStatusBarAppearanceUpdate()
     }
+
+    func detachSplash() {
+        guard let splashRouter = splashRouter else { return }
+
+        // Detach the router. This will also deactivate the interactor.
+        detachChild(splashRouter)
+
+        // Remove from the view hierarchy.
+        splashRouter.viewControllable.uiviewController.view.removeFromSuperview()
+        splashRouter.viewControllable.uiviewController.removeFromParent()
+
+        self.splashRouter = nil
+
+        viewController.uiviewController.setNeedsStatusBarAppearanceUpdate()
+    }
 }

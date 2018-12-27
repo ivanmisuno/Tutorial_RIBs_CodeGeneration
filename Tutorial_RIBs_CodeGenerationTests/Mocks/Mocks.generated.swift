@@ -177,6 +177,14 @@ class RootInteractableMock: RootInteractable {
     }
     var deactivateCallCount: Int = 0
     var deactivateHandler: (() -> ())? = nil
+    func splashDidComplete() {
+        splashDidCompleteCallCount += 1
+        if let __splashDidCompleteHandler = self.splashDidCompleteHandler {
+            __splashDidCompleteHandler()
+        }
+    }
+    var splashDidCompleteCallCount: Int = 0
+    var splashDidCompleteHandler: (() -> ())? = nil
 }
 
 // MARK: - RootListener
@@ -240,6 +248,14 @@ class RootRoutingMock: RootRouting {
     }
     var detachChildCallCount: Int = 0
     var detachChildHandler: ((_ child: Routing) -> ())? = nil
+    func detachSplash() {
+        detachSplashCallCount += 1
+        if let __detachSplashHandler = self.detachSplashHandler {
+            __detachSplashHandler()
+        }
+    }
+    var detachSplashCallCount: Int = 0
+    var detachSplashHandler: (() -> ())? = nil
     func launchFromWindow(_ window: UIWindow) {
         launchFromWindowCallCount += 1
         if let __launchFromWindowHandler = self.launchFromWindowHandler {
@@ -395,6 +411,16 @@ class SplashInteractableMock: SplashInteractable {
 
 // MARK: - SplashListener
 class SplashListenerMock: SplashListener {
+
+    // MARK: - Methods
+    func splashDidComplete() {
+        splashDidCompleteCallCount += 1
+        if let __splashDidCompleteHandler = self.splashDidCompleteHandler {
+            __splashDidCompleteHandler()
+        }
+    }
+    var splashDidCompleteCallCount: Int = 0
+    var splashDidCompleteHandler: (() -> ())? = nil
 }
 
 // MARK: - SplashPresentable
@@ -407,6 +433,24 @@ class SplashPresentableMock: SplashPresentable {
         }
     }
     var listenerSetCount: Int = 0
+
+    // MARK: - Methods
+    func startFadeOutAnimation(completionCallback: @escaping () -> ()) {
+        startFadeOutAnimationCallCount += 1
+        if let __startFadeOutAnimationHandler = self.startFadeOutAnimationHandler {
+            __startFadeOutAnimationHandler(completionCallback)
+        }
+    }
+    var startFadeOutAnimationCallCount: Int = 0
+    var startFadeOutAnimationHandler: ((_ completionCallback: @escaping () -> ()) -> ())? = nil
+    func startLoadingAnimation() {
+        startLoadingAnimationCallCount += 1
+        if let __startLoadingAnimationHandler = self.startLoadingAnimationHandler {
+            __startLoadingAnimationHandler()
+        }
+    }
+    var startLoadingAnimationCallCount: Int = 0
+    var startLoadingAnimationHandler: (() -> ())? = nil
 }
 
 // MARK: - SplashPresentableListener
